@@ -8,8 +8,6 @@ This project focuses on analyzing California wildfire data from 2015 to 2024 to 
 - **Yu-Ching Huang**  
   - USC ID: 6413493088
 
--
-
 ## Create a Conda Enviornment
 
 
@@ -17,7 +15,7 @@ This project focuses on analyzing California wildfire data from 2015 to 2024 to 
 Make sure all required Python libraries are installed. Run the following command to install dependencies:
 pip install -r requirements.txt
 
--
+--
 
 ## Download the Raw Data
 Run the following script to download the raw wildfire incidents data to the data/raw folder:
