@@ -66,7 +66,7 @@ def clean_and_save_data(df):
     df['Started'] = pd.to_datetime(df['Started'], errors='coerce')
     df['ExtinguishedDate'] = pd.to_datetime(df['ExtinguishedDate'], errors='coerce')
     df['ExtinguishedTime'] = df['ExtinguishedDate'] - df['Started']
-    df['ExtinguishedTime'] = df['ExtinguishedTime'].dt.total_seconds() / 3600
+    df['ExtinguishedTime'] = round(df['ExtinguishedTime'].dt.total_seconds() / 3600, 2)
 
     # Drop ExtinguishedDate after calculating duration
     df = df.drop('ExtinguishedDate', axis=1)
@@ -87,6 +87,10 @@ def clean_and_save_data(df):
     # PercentContained: Fill missing values with overall average
     pc_mean = df['PercentContained'].mean()
     df['PercentContained'] = df['PercentContained'].fillna(pc_mean)
+
+    # Remove non-California Wildfire incidents
+    df = df[(df['County'] != 'State of Nevada') & (df['County'] != 'Mono') &
+            (df['County'] != 'El Dorado') & (df['County'] != 'Mexico')]
 
     folder_path = '../data/processed/'
     file_name = 'fire_incidents_data.csv'
