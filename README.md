@@ -4,8 +4,7 @@ California wildfires have become increasingly devastating over the past decade, 
 This project focuses on analyzing California wildfire data from 2015 to 2024 to identify trends and patterns in wildfire activity. The dataset includes information such as fire names, start and extinguished dates, acres burned, and location data. By visualizing and analyzing these metrics, this project aims to provide insights into wildfire behavior, identify high-risk regions, and assess the effectiveness of containment efforts.
 
 ## Team Members (Name and Student IDs)
-- **Yu-Ching Huang**  
-  - USC ID: 6413493088
+- **Yu-Ching Huang**, USC ID: 6413493088
 
 ## Create a Conda Enviornment
 ```bash
@@ -13,10 +12,10 @@ conda create --name env_name python=3.9
 ```
 
 ## Install the Required Libraries
-Make sure all required Python libraries are installed. Run the following command to install dependencies:  
-`pip install -r requirements.txt`
-
----
+Make sure all required Python libraries are installed. Run the following command to install dependencies: 
+```bash
+pip install -r requirements.txt
+```
 
 ## Download the Raw Data
 Run the following script to download the raw wildfire incidents data to the data/raw folder:  
@@ -35,9 +34,3 @@ Perform data analysis by running the analysis script:
 ```bash
 python analyze_visualize_results.py
 ```
-
-This script performs:
-
-
-# Future Work and Improvements
-
