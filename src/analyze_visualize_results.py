@@ -51,8 +51,7 @@ def fire_incidents_map(fire_data: DataFrame):
 
 def incidents_by_year(fire_data: DataFrame):
     """
-    Visualize fire incidents by year,
-    Show the bar plot, and
+    Visualize fire incidents by year and
     Save it to the results/visualizations folder
 
     Args:
@@ -64,7 +63,6 @@ def incidents_by_year(fire_data: DataFrame):
     plt.ylabel('Number of Incidents')
     plt.axhline(y=mean_value, color='r', linestyle='--', label='Mean')
     plt.legend()
-    plt.show()
 
     folder_path = '../results/visualizations'
     os.makedirs(folder_path, exist_ok=True)
@@ -74,8 +72,7 @@ def incidents_by_year(fire_data: DataFrame):
 
 def top_incidents_acre_burned(fire_data: DataFrame, top: int = 10):
     """
-    Visualize top 10 counties with the most number of incidents and total acres burned,
-    Show the bar plot, and
+    Visualize top 10 counties with the most number of incidents and total acres burned and
     Save it to the results/visualizations folder
 
     Args:
@@ -110,7 +107,6 @@ def top_incidents_acre_burned(fire_data: DataFrame, top: int = 10):
     plt.ylabel('Total Acres Burned')
     plt.title('Total Acres Burned by County')
     plt.tight_layout()
-    plt.show()
 
     folder_path = '../results/visualizations'
     os.makedirs(folder_path, exist_ok=True)
@@ -120,8 +116,7 @@ def top_incidents_acre_burned(fire_data: DataFrame, top: int = 10):
 
 def containment_over_time(fire_data: DataFrame):
     """
-    Visualize fire containment over time,
-    Show the line plot, and
+    Visualize fire containment over time and
     Save it to the results/visualizations folder
 
     Args:
@@ -134,7 +129,6 @@ def containment_over_time(fire_data: DataFrame):
     plt.xlabel('Year')
     plt.ylabel('Average Percent Contained')
     plt.title('Trends in Fire Containment over Time')
-    plt.show()
 
     folder_path = '../results/visualizations'
     os.makedirs(folder_path, exist_ok=True)
@@ -144,8 +138,7 @@ def containment_over_time(fire_data: DataFrame):
 
 def top_10_extinguishment_time(fire_data: DataFrame, top: int = 10):
     """
-    Visualize top 10 counties with the longest extinguishment time,
-    Show the bar plot, and
+    Visualize top 10 counties with the longest extinguishment time and
     Save it to the results/visualizations folder
 
     Args:
@@ -158,7 +151,6 @@ def top_10_extinguishment_time(fire_data: DataFrame, top: int = 10):
     plt.xlabel('Average Extinguishment Time (hours)')
     plt.ylabel('County')
     plt.title('Top 10 Counties with Longest Extinguishment Time')
-    plt.show()
 
     folder_path = '../results/visualizations'
     os.makedirs(folder_path, exist_ok=True)
@@ -168,8 +160,7 @@ def top_10_extinguishment_time(fire_data: DataFrame, top: int = 10):
 
 def avg_time_by_county_year(fire_data: DataFrame):
     """
-    Visualize top 10 counties with the longest extinguishment time,
-    Show the heatmap, and
+    Visualize top 10 counties with the longest extinguishment time and
     Save it to the results/visualizations folder
 
     Args:
@@ -182,7 +173,6 @@ def avg_time_by_county_year(fire_data: DataFrame):
     plt.title('Average Extinguishment Time by County and Year')
     plt.xlabel('Year')
     plt.ylabel('County')
-    plt.show()
 
     folder_path = '../results/visualizations'
     os.makedirs(folder_path, exist_ok=True)
