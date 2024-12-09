@@ -8,7 +8,9 @@ This project focuses on analyzing California wildfire data from 2015 to 2024 to 
   - USC ID: 6413493088
 
 ## Create a Conda Enviornment
-`conda create --name env_name python=3.9`
+```bash
+conda create --name env_name python=3.9
+```
 
 ## Install the Required Libraries
 Make sure all required Python libraries are installed. Run the following command to install dependencies:  
