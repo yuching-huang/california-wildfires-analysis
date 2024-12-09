@@ -16,23 +16,28 @@ conda create --name env_name python=3.9
 Make sure all required Python libraries are installed. Run the following command to install dependencies:  
 `pip install -r requirements.txt`
 
---
+---
 
 ## Download the Raw Data
 Run the following script to download the raw wildfire incidents data to the data/raw folder:  
-`python get_data.py`
+```bash
+python get_data.py
+```
 
 ## Clean the Data
 The raw dataset may contain missing/invalid/irrelevant data for data analysis. Run the following script to clean and preprocess the dataset:  
-`python clean_data.py`
+```bash
+python clean_data.py
+```
 
-## Run Analysis
+## Run Analysis and Visualizations
 Perform data analysis by running the analysis script:  
-`python run_analysis.py`
+```bash
+python analyze_visualize_results.py
+```
 
 This script performs:
 
 
-## Create Visualizations
-Generate visualizations by executing the visualization script:  
-`python visualize_results.py`
+# Future Work and Improvements
+
