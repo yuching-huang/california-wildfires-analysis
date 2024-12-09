@@ -8,29 +8,29 @@ This project focuses on analyzing California wildfire data from 2015 to 2024 to 
   - USC ID: 6413493088
 
 ## Create a Conda Enviornment
-
+`conda create --name env_name python=3.9`
 
 ## Install the Required Libraries
 Make sure all required Python libraries are installed. Run the following command to install dependencies:  
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 --
 
 ## Download the Raw Data
 Run the following script to download the raw wildfire incidents data to the data/raw folder:  
-python get_data.py
+`python get_data.py`
 
 ## Clean the Data
 The raw dataset may contain missing/invalid/irrelevant data for data analysis. Run the following script to clean and preprocess the dataset:  
-python clean_data.py
+`python clean_data.py`
 
 ## Run Analysis
 Perform data analysis by running the analysis script:  
-python run_analysis.py
+`python run_analysis.py`
 
 This script performs:
 
 
 ## Create Visualizations
 Generate visualizations by executing the visualization script:  
-python visualize_results.py
+`python visualize_results.py`
