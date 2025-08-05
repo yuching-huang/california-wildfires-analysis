@@ -3,8 +3,7 @@ California wildfires have become increasingly devastating over the past decade, 
 
 This project focuses on analyzing California wildfire data from 2015 to 2024 to identify trends and patterns in wildfire activity. The dataset includes information such as fire names, start and extinguished dates, acres burned, and location data. By visualizing and analyzing these metrics, this project aims to provide insights into wildfire behavior, identify high-risk regions, and assess the effectiveness of containment efforts.
 
-## Team Members (Name and Student IDs)
-- **Yu-Ching Huang**, USC ID: 6413493088
+The California wildfire incident data is collected from [The California Department of Forestry and Fire Protection](https://www.fire.ca.gov/incidents).
 
 ## Create a Conda Enviornment
 ```bash
