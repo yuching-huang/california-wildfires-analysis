@@ -1,6 +1,15 @@
+"""
+get_data.py
+-----------
+Module for fetching wildfire data from a given source and saving it locally.
+"""
+
+import logging
+import os
 import requests
 import json
-import os
+
+logging.basicConfig(level=logging.INFO, format="%(levelname)s - %(message)s")
 
 def fetch_ten_year_data(url: str, end_year: int = 2024):
     """
@@ -13,21 +22,27 @@ def fetch_ten_year_data(url: str, end_year: int = 2024):
     Return:
         None
     """
+    logging.info(f"Fetching data from {url}")
+
     start_year = end_year - 9
     destination_folder = '../data/raw'
     os.makedirs(destination_folder, exist_ok=True)
 
     for year in range(start_year, end_year + 1):
         full_url = f'{url}{year}'
-        response = requests.get(full_url)
 
-        if response.status_code == 200:
+        try:
+            response = requests.get(full_url)
+            response.raise_for_status()
             file_path = os.path.join(destination_folder, f'fire_incidents_{year}.json')
+
             with open(file_path, 'w') as f:
                 json.dump(response.json(), f, indent=4)
-        else:
-            print(f'Failed to fetch data for year {year}. Status code: {response.status_code}')
+            logging.info(f"Saved data for {year} -> {file_path}")
 
-if __name__ == '__main__':
+        except requests.exceptions.RequestException as e:
+            logging.error(f"Failed to fetch data for year {year}: {e}")
+
+if __name__ == '__main__':  # The url is no longer available
     url = 'https://incidents.fire.ca.gov/umbraco/api/IncidentApi/List?inactive=true&year='
     fetch_ten_year_data(url)
